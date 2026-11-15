@@ -1,0 +1,1 @@
+- [Portfolio direction](portfolio-direction.md) — target employers and clients equally; professional terminal feel, restrained GSAP, recent work first.

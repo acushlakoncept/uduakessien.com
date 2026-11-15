@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Uduak Essien — Software Engineer"
+description = "A professional terminal-inspired personal website for Uduak Essien, showcasing recent enterprise engineering work, career background, technical publications, and ways for employers and clients to get in touch."
+version = "1.0.0"
+id = "artifacts/uduak-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21744
+
+[services.development]
+run = "pnpm --filter @workspace/uduak-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/uduak-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/uduak-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21744"
+BASE_PATH = "/"

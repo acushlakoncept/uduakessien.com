@@ -2,6 +2,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { profile } from "@/lib/content";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const nav = [
   { href: "/", label: "home", cmd: "~" },
@@ -52,9 +53,12 @@ export function SiteShell({ children }: { children: ReactNode }) {
               résumé.pdf
             </a>
           </nav>
-          <button className="md:hidden p-2 text-foreground" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-label="Toggle menu" data-testid="button-menu">
-            {open ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <button className="md:hidden p-2 text-foreground" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-label="Toggle menu" data-testid="button-menu">
+              {open ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
         {open && (
           <nav aria-label="Mobile" className="md:hidden border-t border-border font-mono text-sm px-5 py-3 flex flex-col">

@@ -7,6 +7,19 @@
     <meta name="description" content="Uduak Essien is a senior full stack engineer building enterprise Ruby on Rails and React applications. Based in Portugal, open to remote work worldwide." />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#16120f" />
+    <script>
+      (() => {
+        let theme;
+        try { theme = localStorage.getItem("uduak-theme"); } catch {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle("dark", theme === "dark");
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#f8f5f0" : "#16120f";
+      })();
+    </script>
     <meta property="og:title" content="Uduak Essien — Senior Full Stack Engineer" />
     <meta property="og:description" content="Enterprise Rails and React applications, REST APIs and production reliability. Portugal, remote worldwide." />
     <meta property="og:type" content="website" />

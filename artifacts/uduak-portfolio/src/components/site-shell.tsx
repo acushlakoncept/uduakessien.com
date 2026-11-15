@@ -33,9 +33,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[70] bg-primary text-primary-foreground px-3 py-2 font-mono text-sm">Skip to content</a>
       <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
         <div className="mx-auto max-w-6xl px-5 h-14 flex items-center justify-between font-mono text-[13px]">
-          <Link href="/" className="flex items-center gap-2 text-foreground" data-testid="link-logo">
-            <span className="text-primary">uduak@essien</span>
-            <span className="text-muted-foreground">:{path}$</span>
+          <Link href="/" className="flex items-center gap-3 text-foreground" data-testid="link-logo" aria-label="Uduak Essien — home">
+            <img src={`${import.meta.env.BASE_URL}assets/uduak-essien-logo.png`} alt="Uduak Essien" width={122} height={54} className="h-10 w-auto shrink-0 object-contain" />
+            <span className="hidden sm:inline text-muted-foreground" aria-hidden="true">:{path}$</span>
           </Link>
           <nav aria-label="Primary" className="hidden md:flex items-center gap-1">
             {nav.slice(1).map((n) => {

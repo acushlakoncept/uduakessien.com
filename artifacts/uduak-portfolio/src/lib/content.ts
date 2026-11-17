@@ -102,10 +102,8 @@ export const projects: Project[] = [
     problem: "Developed and integrated a Leads Management system within the company’s internal ecosystem, alongside a custom subscription and billing infrastructure.",
     work: [
       "Implemented lead management workflows covering lead creation, assignment, status tracking, follow-ups, and conversion.",
-      "Designed and developed a custom subscription management system supporting three monthly subscription tiers.",
-      "Integrated Stripe for secure payment processing and recurring subscription billing.",
-      "Implemented a hybrid payment mechanism combining internally allocated promotional funds with Stripe, allowing customers to use available credits towards subscription payments and charge any outstanding balance to their payment card.",
-      "Developed automated payment allocation and subscription workflows to streamline billing and subscription management.",
+      "Designed and developed a custom subscription system supporting three monthly tiers, integrating Stripe for recurring payments and secure transaction processing.",
+      "Implemented a hybrid payment mechanism combining internally allocated promotional funds with Stripe, enabling automated credit allocation and payment of outstanding balances.",
     ],
     stack: ["Ruby on Rails", "React.js", "PostgreSQL", "Stripe API"],
   },

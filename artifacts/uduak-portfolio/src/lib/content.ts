@@ -94,6 +94,20 @@ export const projects: Project[] = [
     stack: ["Ruby on Rails", "React", "PostgreSQL", "REST"],
   },
   {
+    id: "leads-management",
+    name: "Leads Management",
+    client: "OCConnect · Owens Corning · via Whitelabel Collaborative",
+    kind: "Leads & subscriptions",
+    summary: "Leads management within OCConnect, with a custom three-tier subscription system combining internal promo-funds and Stripe card payments.",
+    problem: "OCConnect needed leads management subscriptions that could use internal promo-funds, card payments, or a combination of both.",
+    work: [
+      "Developed leads management and a custom subscription system with three tiers.",
+      "Integrated Stripe card payments with the platform's internal promo-funds.",
+      "Applied available promo-funds first, charging any remaining balance through Stripe—or the full amount when no promo-funds were available.",
+    ],
+    stack: ["Stripe", "Subscription billing", "Promo-funds"],
+  },
+  {
     id: "warranty-claims",
     name: "Warranty Claims Management",
     client: "Owens Corning · via Whitelabel Collaborative",

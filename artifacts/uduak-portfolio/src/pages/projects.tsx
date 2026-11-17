@@ -6,7 +6,7 @@ import { CtaLink, PageHead, SectionLabel, Tag } from "@/components/bits";
 import { projects, sideProjects } from "@/lib/content";
 
 export default function Projects() {
-  usePageMeta("Projects", "Professional work by Uduak Essien: OCConnect, Warranty Claims Management for Owens Corning, and Racing for Recovery mobile APIs, plus selected personal projects.");
+  usePageMeta("Projects", "Professional work by Uduak Essien: OCConnect, Leads Management with Stripe subscriptions, Warranty Claims Management for Owens Corning, and Racing for Recovery mobile APIs.");
   const ref = usePageAnimations<HTMLDivElement>();
   useEffect(() => {
     const id = window.location.hash.slice(1);

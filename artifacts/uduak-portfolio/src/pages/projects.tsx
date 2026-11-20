@@ -6,7 +6,7 @@ import { CtaLink, PageHead, SectionLabel, Tag } from "@/components/bits";
 import { projects, sideProjects } from "@/lib/content";
 
 export default function Projects() {
-  usePageMeta("Projects", "Professional work by Uduak Essien: OCConnect, Leads Management with Stripe subscriptions, Warranty Claims Management for Owens Corning, and Racing for Recovery mobile APIs.");
+  usePageMeta("Projects", "Selected work by Uduak Essien: OCConnect, Leads Management with Stripe subscriptions, Warranty Claims Management, Racing for Recovery APIs, and ClearPDF's privacy-first PDF tools.");
   const ref = usePageAnimations<HTMLDivElement>();
   useEffect(() => {
     const id = window.location.hash.slice(1);
@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <div ref={ref}>
       <PageHead cmd="ls -la ~/work --sort=recent" title={<>Professional <span className="text-primary">work.</span></>}
-        lede="Client work delivered through Whitelabel Collaborative (2022 — 2026). These are private, enterprise systems, so there are no public screenshots or links here — just an honest account of the problems and what I built." />
+        lede="Selected client work and independent projects. Enterprise work was delivered through Whitelabel Collaborative (2022 — 2026); those systems are private, while public projects include a link to explore." />
 
       <section className="mx-auto max-w-6xl px-5 pb-16 space-y-6">
         {projects.map((p, i) => (
@@ -30,6 +30,11 @@ export default function Projects() {
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-[-0.03em]">{p.name}</h2>
                 <p className="mt-2 font-mono text-xs text-muted-foreground">{p.client}</p>
                 <p className="mt-6 text-muted-foreground leading-relaxed">{p.problem}</p>
+                {p.url && (
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" data-testid={`link-project-${p.id}`} className="mt-6 inline-block font-mono text-sm text-primary underline underline-offset-4 hover:text-foreground transition-colors">
+                    visit live site ↗
+                  </a>
+                )}
                 <div className="mt-6 flex flex-wrap gap-2">{p.stack.map((s) => <Tag key={s}>{s}</Tag>)}</div>
               </div>
               <div>

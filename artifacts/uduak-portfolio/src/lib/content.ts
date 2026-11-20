@@ -76,6 +76,7 @@ export type Project = {
   problem: string;
   work: string[];
   stack: string[];
+  url?: string;
 };
 
 export const projects: Project[] = [
@@ -134,6 +135,22 @@ export const projects: Project[] = [
       "Carried features through to production delivery.",
     ],
     stack: ["Ruby on Rails", "REST", "PostgreSQL"],
+  },
+  {
+    id: "clearpdf",
+    name: "ClearPDF",
+    client: "Independent project",
+    kind: "PDF toolkit",
+    summary: "A free, privacy-first PDF toolkit to merge, split, compress, edit, sign, redact, run OCR, and convert files—without sign-up, watermarks, or a paywall.",
+    problem: "Everyday PDF tasks should be accessible without paid subscriptions or unnecessary file uploads. ClearPDF brings editing, conversion, and document workflows together in one free toolkit.",
+    work: [
+      "Built tools to merge, split, compress, edit, sign, and redact PDFs, run OCR, and convert between PDF, Office documents, images, and other formats.",
+      "Kept most processing in the browser, so files stay on the user's device.",
+      "Clearly marked server-based conversions, using private temporary folders and immediate file deletion without storing or logging file contents.",
+      "Made all tools available without mandatory sign-up, watermarks, or a paywall.",
+    ],
+    stack: [],
+    url: "https://clearpdftools.com/",
   },
 ];
 

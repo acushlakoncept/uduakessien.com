@@ -80,7 +80,7 @@ The repository also includes shared API/database scaffolding and a component-pre
 │   │   ├── index.html           # HTML entry, initial theme, default metadata
 │   │   ├── public/
 │   │   │   ├── assets/          # Published logo, portrait, and résumé
-│   │   │   ├── favicon.svg
+│   │   │   ├── favicon.ico
 │   │   │   └── robots.txt       # Allows crawling
 │   │   ├── src/
 │   │   │   ├── components/      # Shared layout, theme toggle, and UI components
@@ -207,7 +207,7 @@ Published assets live in `artifacts/uduak-portfolio/public/`:
 | `assets/uduak-essien-logo.png` | Shared header logo |
 | `assets/uduak-portrait.png` | Portrait and default social image |
 | `assets/Uduak_Essien_Resume.pdf` | Résumé download links |
-| `favicon.svg` | Browser tab icon |
+| `favicon.ico` | Browser tab icon (the supplied file contains a 64×64 PNG image) |
 
 Replace these files while keeping their names to preserve existing links. If renaming a file, update all references, including `profile`, the header, and `index.html` where applicable.
 

@@ -3,8 +3,8 @@ name: Portfolio hosting direction
 description: User-approved hosting source and canonical domain.
 ---
 
-Host the redesigned portfolio on Vercel using the GitHub repository's main branch as the source, but leave uduakessien.com and www.uduakessien.com attached to the older portfolio-nextjs project. Preserve the existing apex-to-www redirect and external DNS setup.
+Host the redesigned portfolio on Vercel using the GitHub repository's main branch as the source. Use www.uduakessien.com as the primary domain, with uduakessien.com redirecting to it.
 
-**Why:** After initially approving a domain move, the user changed direction: “let me keep the setup as it was on portfolio-nextjs”.
+**Why:** The user initially asked to restore the older portfolio-nextjs setup, then reported updating it themselves. Live verification confirmed both domains were moved to the redesigned portfolio and DNS correctly pointed to Vercel.
 
-**How to apply:** Keep the redesigned site's Vercel address separate from the custom domains unless the user explicitly requests another switch. Inspect live DNS and Vercel settings rather than assuming they match this intent.
+**How to apply:** Preserve the current custom-domain setup and apex-to-www redirect. Inspect live DNS and Vercel settings rather than assuming they match this intent.

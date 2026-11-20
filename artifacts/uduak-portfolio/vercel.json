@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "installCommand": "cd ../.. && npx --yes pnpm@10.26.1 install --frozen-lockfile",
+  "buildCommand": "PORT=5173 BASE_PATH=/ npx --yes pnpm@10.26.1 run build",
+  "outputDirectory": "dist/public",
+  "rewrites": [
+    { "source": "/((?!assets/|favicon\\.svg|robots\\.txt).*)", "destination": "/index.html" }
+  ]
+}

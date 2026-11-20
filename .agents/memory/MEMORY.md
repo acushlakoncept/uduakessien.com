@@ -1,1 +1,2 @@
 - [Portfolio direction](portfolio-direction.md) — target employers and clients equally; professional terminal feel, restrained GSAP, recent work first.
+- [Hosting direction](hosting-direction.md) — Vercel from GitHub main; preserve www as the primary domain.
